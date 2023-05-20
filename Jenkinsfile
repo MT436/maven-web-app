@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages{
-        stage('build: maven'){
+        stage('integration testing: maven'){
             steps{
                 sh 'mvn test' 
             }
         }
-        stage('build: maven'){
+        stage('unittest: maven'){
             steps{
                 sh 'mvn verify -DskipUnitTest' 
             }
