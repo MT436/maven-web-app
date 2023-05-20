@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    parameters {
+      string defaultValue: '0', name: 'start/n stop', trim: true
+      }
+
     stages{
         stage('UnitTest: maven'){
             steps{
